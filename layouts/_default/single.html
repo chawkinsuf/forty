@@ -18,10 +18,8 @@
                             <header class="major">
                                 <h1>{{ .Title}}</h1>
                             </header>
-                            {{ if .Params.image }}
-                                <span class="image main"><img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" /></span>
-                            {{ end }}
                             {{ .Content }}
+                            {{ partial "grid.html" . }}
                         </div>
                     </section>
             {{ "<!-- Disqus Inject -->" | safeHTML }}
@@ -35,6 +33,7 @@
                 {{ partial "footer.html" . }}
             {{ end }}
         </div>
+    {{ partial "photoswipe.html" . }}
 
     {{ "<!-- Scripts -->" | safeHTML}}
         {{ partial "js.html" . }}
