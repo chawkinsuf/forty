@@ -43,8 +43,6 @@
 				));
 				background-color: _palette(fg-bold);
 				color: _palette(bg);
-				display: inline-block;
-				line-height: 1.65em;
 				margin-right: 0.325em;
 				padding: 0 0.125em 0 (_font(letter-spacing-alt) + 0.125em);
 			}
@@ -131,7 +129,7 @@
 
 		&.alt {
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
-			@include vendor('transition-delay', '0.75s');
+			// @include vendor('transition-delay', '0.75s');
 			@include vendor('animation', 'none');
 			background-color: transparent;
 			box-shadow: none;
@@ -145,11 +143,11 @@
 			&.style6 { .logo { strong { color: _palette(accent6); } } }
 		}
 
-		body.is-loading & {
-			&.alt {
-				opacity: 0;
-			}
-		}
+		// body.is-loading & {
+		// 	&.alt {
+		// 		opacity: 0;
+		// 	}
+		// }
 
 		@include breakpoint(xlarge) {
 			nav {
